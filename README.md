@@ -19,7 +19,7 @@ The simulator operates on a compressed **200-millisecond time slice interval** t
 ## 📈 Performance Strategy Results Summary
 
 * **Gross Day Trading PnL**: +$1,200 USD on 
-* **Maximum Risk Exposure Ceiling**: 2.0 BTC (Peak Delta Risk exposure evaluated at roughly $4,000 USD against a $2,000 mean daily asset move. A draw down of approximately $160,000).
+* **Maximum Risk Exposure Ceiling**: 2.0 BTC (Peak Delta Risk exposure evaluated at roughly $4,000 USD against a $2,000 mean daily asset move. At 2.0 BTC the strategy requires around $160,000 of seed capital).
 * **Mean Positional Balance**: -0.2 BTC (Confirming highly efficient gravitational convergence toward an inventory-neutral state).
 
 ## 🛠️ Tech Stack & Implementation
@@ -34,7 +34,7 @@ The simulator operates on a compressed **200-millisecond time slice interval** t
 * Dynamically adjust those thresholds to manage inventory risk, with more aggressive management the further we deviate from a desired threshold
 
 ## 🤷‍♂️ Caveats 
-* We assume no transaction costs, this would probably annihilate our PnL
-* We only place orders at the first level, never any deeper
+* We assume no transaction costs, this would probably annihilate our PnL, (and mean our sharpe ratio would be more realistic, rather than the approximate tripling of our money after a year if the current results were replicated)
+* We only place orders at the first level, never any deeper. Secondly we only model the queue, we don't replicate it exactly.
 * Our metrics are very out of date
 * This wasn't written to be efficient, just as a learning tool for learning a bit more about market making
